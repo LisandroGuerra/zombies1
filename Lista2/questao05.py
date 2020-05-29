@@ -1,17 +1,17 @@
 print('Qual o maior e o menor de 3 números')
-n1 = int(input("Entre com o primeiro número: "))
-n2 = int(input("Entre com o segundo número: "))
-n3 = int(input("Entre com o terceiro número: "))
-if n1 >= n2 and n1 >= n3:
-    maior = n1
-elif n2 >= n3:
-    maior= n2
+number1 = int(input("Entre com o primeiro número: "))
+number2 = int(input("Entre com o segundo número: "))
+number3 = int(input("Entre com o terceiro número: "))
+if number1 >= number2 and number1 >= number3:
+    maior = number1
+elif number2 >= number3:
+    maior= number2
 else:
-    maior = n3
-if n1 <= n2 and n1 <= n3:
-    menor = n1
-elif n2 <= n3:
-    menor= n2
+    maior = number3
+if number1 <= number2 and number1 <= number3:
+    menor = number1
+elif number2 <= number3:
+    menor= number2
 else:
-    menor = n3
+    menor = number3
 print ('O maior é ', maior,'e o menor é ', menor)
