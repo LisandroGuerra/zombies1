@@ -26,7 +26,7 @@ num = '''213752 216732 221063 221545 225583 229133 230648 233222
 
 def repetido(numero):
     for digito in range(10):
-        if str(digito)+str(digito) in numero:
+        if str(digito) + str(digito) in numero:
             return False
     return True
 
