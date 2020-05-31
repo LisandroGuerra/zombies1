@@ -7,8 +7,8 @@ texto = '''The Python Software Foundation and the global
    whatever your background, we welcome you.'''.lower()
 
 import string
-for c in string.punctuation:
-  texto = texto.replace(c, ' ')
+for caracter in string.punctuation:
+  texto = texto.replace(caracter, ' ')
 
 def pitônica(palavra):
   for letra in palavra:
