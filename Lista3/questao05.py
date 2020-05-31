@@ -1,20 +1,20 @@
 print('Calcula MDC por Euclides')
 
 while True:
-    def mdc(n1, n2):
+    def mdc(number1, number2):
         
-        while n1 % n2 != 0:
-            n1, n2 = n2, n1 % n2
+        while number1 % number2 != 0:
+            number1, number2 = number2, number1 % number2
 
-        return n2
+        return number2
         
 
-    n1 = int(input("Digite primeiro número: "))
-    if n1 == 0:
+    number1 = int(input("Digite primeiro número: "))
+    if number1 == 0:
         break
     else:
-        n2 = int(input("Digite segundo número: "))
+        number2 = int(input("Digite segundo número: "))
     
-        print("O MDC é %d" % mdc(n1, n2))
+        print("O MDC é %d" % mdc(number1, number2))
         print()
 
