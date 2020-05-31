@@ -6,8 +6,8 @@ mutual respect, tolerance, and encouragement, and we are working to help each ot
 to these principles. We want our community to be more diverse: whoever you are, and
 whatever your background, we welcome you.'''.lower()
 
-for x in string.punctuation:
-    texto = texto.replace(x, "")
+for caracter in string.punctuation:
+    texto = texto.replace(caracter, "")
 
 def letras(palavra):
   for letra in palavra:
