@@ -69,7 +69,6 @@ def make_tags(tag, word):
 # extra_end('Hi'), 'HiHiHi'  
 def extra_end(s):
   return s[-2:] * 3
-# return (s[-2] + s[-1]) * 3
 
 # H. first_half
 # seja uma string s
@@ -78,7 +77,7 @@ def extra_end(s):
 # first_half('HelloThere') -> 'Hello'
 # first_half('abcdef') -> 'abc'
 def first_half(s):
-  return s[:len(s)//2]
+  return s[:len(s) // 2]
 
 # I. sem_pontas
 # seja uma string s de pelo menos dois caracteres
