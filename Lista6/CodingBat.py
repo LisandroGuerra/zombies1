@@ -7,9 +7,11 @@
 # você pode ficar dormindo quando é feriado ou não é dia semana
 # retorne True ou False conforme você vá dormir ou não
 def dormir(dia_semana, feriado):
-#  if not dia_semana or feriado:
-#    return True    
-#  return False
+  if not dia_semana or feriado:
+    return True    
+  return False
+
+def dormir2(dia_semana, feriado):
   return not dia_semana or feriado
 
 # B. alunos_problema
@@ -18,11 +20,6 @@ def dormir(dia_semana, feriado):
 # temos problemas quando ambos estão sorrindo ou ambos não estão sorrindo
 # retorne True quando houver problemas
 def alunos_problema(a_sorri, b_sorri):
-#  if a_sorri and b_sorri:
-#    return True
-#  elif a_sorri or b_sorri:
-#    return False
-#  return True
   return a_sorri == b_sorri
 
 # C. soma_dobro
@@ -31,9 +28,11 @@ def alunos_problema(a_sorri, b_sorri):
 # soma_dobro(1, 2) -> 3
 # soma_dobro(2, 2) -> 8
 def soma_dobro(a, b):
-#  if a == b:
-#    return (a + b) * 2
-#  return a + b
+  if a == b:
+    return (a + b) * 2
+  return a + b
+
+def soma_dobro2(a, b):
   return (a + b) * 2 if a == b else a + b
 
 # D. diff21
@@ -131,6 +130,13 @@ def main():
   test(dormir(True, True), True)
 
   print ()
+  print ('Oba! Hoje vou ficar dormindo 2 !')
+  test(dormir2(False, False), True)
+  test(dormir2(True, False), False)
+  test(dormir2(False, True), True)
+  test(dormir2(True, True), True)
+
+  print ()
   print ('Alunos problema')
   test(alunos_problema(True, True), True)
   test(alunos_problema(False, False), True)
@@ -145,6 +151,15 @@ def main():
   test(soma_dobro(-1, 0), -1)
   test(soma_dobro(0, 0), 0)
   test(soma_dobro(0, 1), 1)
+  
+  print ()
+  print ('Soma dobro 2')
+  test(soma_dobro2(1, 2), 3)
+  test(soma_dobro2(3, 2), 5)
+  test(soma_dobro2(2, 2), 8)
+  test(soma_dobro2(-1, 0), -1)
+  test(soma_dobro2(0, 0), 0)
+  test(soma_dobro2(0, 1), 1)
 
   print ()
   print ('Diff21')
