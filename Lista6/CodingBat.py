@@ -42,9 +42,11 @@ def soma_dobro2(a, b):
 # diff21(25) -> 8
 # dica: abs(x) retorna o valor absoluto de x
 def diff21(n):
-#  if n > 21:
-#    return abs(n - 21) * 2
-#  return abs(n - 21)
+  if n > 21:
+    return abs(n - 21) * 2
+  return abs(n - 21)
+
+def diff21_2(n):
   return abs(n - 21) * 2 if n > 21 else abs(n - 21)
 
 # E. papagaio
@@ -169,6 +171,15 @@ def main():
   test(diff21(22), 2)
   test(diff21(25), 8)
   test(diff21(30), 18)
+  
+  print ()
+  print ('Diff21 2')
+  test(diff21_2(19), 2)
+  test(diff21_2(10), 11)
+  test(diff21_2(21), 0)
+  test(diff21_2(22), 2)
+  test(diff21_2(25), 8)
+  test(diff21_2(30), 18)
 
   print ()
   print ('Papagaio')
