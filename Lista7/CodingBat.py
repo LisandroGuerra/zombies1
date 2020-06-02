@@ -13,11 +13,13 @@ def multstring(s, n):
 # string_splosion('abc') -> 'aababc'
 # string_splosion('ab') -> 'aab'
 def string_splosion(s):
+    r = []
+    for i in range(len(s) + 1):
+        r.append(s[0:i])
+    return ''.join(r)
+
+def string_splosion2(s):
   return ''.join([s[:k] for k in range(len(s) + 1)])
-'''  r = []
-     for i in range(len(s) + 1):
-       r.append(s[0:i])
-     return ''.join(r)'''
 
 # C. array_count9
 # conta quantas vezes aparece o 9 numa lista nums
@@ -132,6 +134,19 @@ def main():
   test(string_splosion('Bye'), 'BByBye')
   test(string_splosion('Good'), 'GGoGooGood')
   test(string_splosion('Bad'), 'BBaBad')
+  
+  print ()
+  print ('String Explosion 2')
+  test(string_splosion2('Code'), 'CCoCodCode')
+  test(string_splosion2('abc'), 'aababc')
+  test(string_splosion2('ab'), 'aab')
+  test(string_splosion2('x'), 'x')
+  test(string_splosion2('fade'), 'ffafadfade')
+  test(string_splosion2('There'), 'TThTheTherThere')
+  test(string_splosion2('Kitten'), 'KKiKitKittKitteKitten')
+  test(string_splosion2('Bye'), 'BByBye')
+  test(string_splosion2('Good'), 'GGoGooGood')
+  test(string_splosion2('Bad'), 'BBaBad')
 
   print ()
   print ('Array count 9')
