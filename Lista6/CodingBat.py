@@ -55,10 +55,12 @@ def diff21_2(n):
 # temos problemas se o papagaio estiver falando
 # antes da 7 ou depois das 20
 def papagaio(falando, hora):
-#  if falando:
-#    if hora < 7 or hora > 20:
-#      return True
-#  return False
+  if falando:
+    if hora < 7 or hora > 20:
+      return True
+  return False
+
+def papagaio_2(falando, hora):
   return falando and (hora < 7 or hora > 20)
 
 # F. dez
@@ -190,6 +192,16 @@ def main():
   test(papagaio(False, 21), False)
   test(papagaio(True, 23), True)
   test(papagaio(True, 20), False)
+  
+  print ()
+  print ('Papagaio 2')
+  test(papagaio_2(True, 6), True)
+  test(papagaio_2(True, 7), False)
+  test(papagaio_2(False, 6), False)
+  test(papagaio_2(True, 21), True)
+  test(papagaio_2(False, 21), False)
+  test(papagaio_2(True, 23), True)
+  test(papagaio_2(True, 20), False)
 
   print ()
   print ('Dez')
