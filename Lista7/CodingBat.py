@@ -24,14 +24,14 @@ def string_splosion2(s):
 # C. array_count9
 # conta quantas vezes aparece o 9 numa lista nums
 def array_count9(nums):
-  return nums.count(9)
-'''
   c = 0
   for n in nums:
     if int(n) == 9:
       c += 1
   return c
-'''
+
+def array_count9_2(nums):
+  return nums.count(9)
 
 # D. array_front9
 # verifica se pelo menos um dos quatro primeiros é nove
@@ -157,6 +157,16 @@ def main():
   test(array_count9([]), 0)
   test(array_count9([4, 2, 4, 3, 1]), 0)
   test(array_count9([9, 2, 99, 3, 1]), 1)
+  
+   print ()
+  print ('Array count 9 => 2')
+  test(array_count9_2([1, 99, 9]), 1)
+  test(array_count9_2([1, 9, 9]), 2)
+  test(array_count9_2([1, 9, 9, 3, 9]), 3)
+  test(array_count9_2([1, 2, 3]), 0)
+  test(array_count9_2([]), 0)
+  test(array_count9_2([4, 2, 4, 3, 1]), 0)
+  test(array_count9_2([9, 2, 99, 3, 1]), 1)
   
   print ()
   print ('Array front 9')
