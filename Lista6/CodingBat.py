@@ -67,9 +67,11 @@ def papagaio_2(falando, hora):
 # dados dois inteiros a e b
 # retorna True se um dos dois é 10 ou a soma é 10
 def dez(a, b):
-#  if a + b == 10 or a == 10 or b == 10:
-#    return True
-#  return False
+  if a + b == 10 or a == 10 or b == 10:
+    return True
+  return False
+
+def dez2(a, b):
   return a + b == 10 or a == 10 or b == 10
 
 # G. dista10
@@ -214,6 +216,18 @@ def main():
   test(dez(8, 3), False)
   test(dez(10, 42), True)
   test(dez(12, -2), True)
+  
+  print ()
+  print ('Dez 2')
+  test(dez2(9, 10), True)
+  test(dez2(9, 9), False)
+  test(dez2(1, 9), True)
+  test(dez2(10, 1), True)
+  test(dez2(10, 10), True)
+  test(dez2(8, 2), True)
+  test(dez2(8, 3), False)
+  test(dez2(10, 42), True)
+  test(dez2(12, -2), True)
 
   print ()
   print ('Dista 10')
