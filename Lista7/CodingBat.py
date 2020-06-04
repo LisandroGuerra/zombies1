@@ -39,14 +39,14 @@ def array_count9_2(nums):
 # array_front9([1, 2, 3, 4, 9]) -> False
 # array_front9([1, 2, 3, 4, 5]) -> False
 def array_front9(nums):
-  return 9 in nums[:4]
-'''
   for i in range(len(nums)):
     if i < 4:
       if nums[i] == 9:
         return True
   return False
-'''
+
+def array_front9_2(nums):
+  return 9 in nums[:4]
 
 # E. hello_name
 # seja uma string name
@@ -182,6 +182,21 @@ def main():
   test(array_front9([9]), True)
   test(array_front9([]), False)
   test(array_front9([3, 9, 2, 3, 3]), True)
+  
+  print ()
+  print ('Array front 9 => 2')
+  test(array_front9_2([1, 2, 9, 3, 4]), True)
+  test(array_front9_2([1, 2, 3, 4, 9]), False)
+  test(array_front9_2([1, 2, 3, 4, 5]), False)
+  test(array_front9_2([9, 2, 3]), True)
+  test(array_front9_2([1, 9, 9]), True)
+  test(array_front9_2([1, 2, 3]), False)
+  test(array_front9_2([1, 9]), True)
+  test(array_front9_2([5, 5]), False)
+  test(array_front9_2([2]), False)
+  test(array_front9_2([9]), True)
+  test(array_front9_2([]), False)
+  test(array_front9_2([3, 9, 2, 3, 3]), True)
 
   print ()
   print ('Hello Name')
