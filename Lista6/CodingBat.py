@@ -82,9 +82,11 @@ def dez2(a, b):
 # dista10(90) -> True
 # dista10(89) -> False
 def dista10(n):
-#  if abs(n - 100) <= 10 or abs(n - 200) <= 10:
-#    return True
-#  return False
+  if abs(n - 100) <= 10 or abs(n - 200) <= 10:
+    return True
+  return False
+
+def dista10_2(n):
   return abs(n - 100) <= 10 or abs(n - 200) <= 10
 
 # H. apaga
@@ -246,6 +248,24 @@ def main():
   test(dista10(210), True)
   test(dista10(211), False)
   test(dista10(290), False)
+  
+  print ()
+  print ('Dista 10 => 2')
+  test(dista10_2(93), True)
+  test(dista10_2(90), True)
+  test(dista10_2(89), False)
+  test(dista10_2(110), True)
+  test(dista10_2(111), False)
+  test(dista10_2(121), False)
+  test(dista10_2(0), False)
+  test(dista10_2(5), False)
+  test(dista10_2(191), True)
+  test(dista10_2(189), False)
+  test(dista10_2(190), True)
+  test(dista10_2(200), True)
+  test(dista10_2(210), True)
+  test(dista10_2(211), False)
+  test(dista10_2(290), False)
 
   print ()
   print ('Apaga')
