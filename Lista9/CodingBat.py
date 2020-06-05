@@ -16,10 +16,13 @@ def first_last6(nums):
 # same_first_last([1, 2, 3, 1]) -> True
 # same_first_last([1, 2, 1]) -> True
 def same_first_last(nums):
-#  if nums:
-#    if nums[0] == nums[-1]:
-#      return True
-#  return False
+  if nums:
+    if nums[0] == nums[-1]:
+      return True
+  return False
+
+
+def same_first_last2(nums):
   return len(nums) > 0 and nums[0] == nums[-1]
 
 # C. common_end
@@ -204,6 +207,15 @@ def main():
   test(same_first_last([7]), True)
   test(same_first_last([]), False)
   test(same_first_last([7, 7]), True)
+  
+  print ()
+  print ('Same_first_last 2')
+  test(same_first_last2([1, 2, 3]), False)
+  test(same_first_last2([1, 2, 3, 1]), True)
+  test(same_first_last2([1, 2, 1]), True)
+  test(same_first_last2([7]), True)
+  test(same_first_last2([]), False)
+  test(same_first_last2([7, 7]), True)
 
   print ()
   print ('Common_end')
