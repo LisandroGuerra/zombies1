@@ -95,12 +95,16 @@ def dista10_2(n):
 # apaga('kitten', 1) -> 'ktten'
 # apaga('kitten', 4) -> 'kittn'
 def apaga(s, n):
-#  w = []
-#  for l in s:
-#    w.append(l)
-#  del w[n]
-#  return ''.join(w)
+  w = []
+  for l in s:
+    w.append(l)
+  del w[n]
+  return ''.join(w)
+
+
+def apaga2(s, n):
   return s[:n] + s[n + 1:]
+
 
 # I. troca
 # seja uma string s
@@ -279,6 +283,19 @@ def main():
   test(apaga('code', 2), 'coe')
   test(apaga('code', 3), 'cod')
   test(apaga('chocolate', 8), 'chocolat')
+  
+  print ()
+  print ('Apaga 2')
+  test(apaga2('kitten', 1), 'ktten')
+  test(apaga2('kitten', 0), 'itten') 
+  test(apaga2('kitten', 4), 'kittn')
+  test(apaga2('Hi', 0), 'i')
+  test(apaga2('Hi', 1), 'H')
+  test(apaga2('code', 0), 'ode')
+  test(apaga2('code', 1), 'cde')
+  test(apaga2('code', 2), 'coe')
+  test(apaga2('code', 3), 'cod')
+  test(apaga2('chocolate', 8), 'chocolat')
 
   print ()
   print ('Troca letras')
