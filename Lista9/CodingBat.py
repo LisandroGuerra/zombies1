@@ -42,14 +42,17 @@ def common_end(a, b):
 # maior_ponta([1, 2, 3]) -> [3, 3, 3]
 # maior_ponta([1, 3, 2]) -> [2, 2, 2]
 def maior_ponta(nums):
-#  nova = []
-#  if nums[0] >= nums[-1]:
-#    maior = nums[0]
-#  else:
-#    maior = nums[-1]
-#  for n in nums:
-#    nova.append(maior)
-#  return nova
+  nova = []
+  if nums[0] >= nums[-1]:
+    maior = nums[0]
+  else:
+    maior = nums[-1]
+  for n in nums:
+    nova.append(maior)
+  return nova
+
+
+def maior_ponta2(nums):
   return [max(nums[0], nums[-1])] * len(nums)
 
 # E. sum2
@@ -235,6 +238,17 @@ def main():
   test(maior_ponta([2, 2, 2]), [2, 2, 2])
   test(maior_ponta([2, 11, 2]), [2, 2, 2])
   test(maior_ponta([0, 0, 1]), [1, 1, 1])
+  
+  print ()
+  print ('Maior_ponta 2')
+  test(maior_ponta2([1, 2, 3]), [3, 3, 3])
+  test(maior_ponta2([11, 5, 9]), [11, 11, 11])
+  test(maior_ponta2([2, 11, 3]), [3, 3, 3])
+  test(maior_ponta2([11, 3, 3]), [11, 11, 11])
+  test(maior_ponta2([3, 11, 11]), [11, 11, 11])
+  test(maior_ponta2([2, 2, 2]), [2, 2, 2])
+  test(maior_ponta2([2, 11, 2]), [2, 2, 2])
+  test(maior_ponta2([0, 0, 1]), [1, 1, 1])
   
   print ()
   print ('sum2')
