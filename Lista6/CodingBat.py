@@ -114,15 +114,19 @@ def apaga2(s, n):
 # troca('a') -> 'a'
 # troca('ab') -> 'ba'
 def troca(s):
-#  if len(s) <= 1:
-#    return s
-#  else:
-#    w = []
-#    for l in s:
-#      w.append(l)
-#    w[0], w[-1] = w[-1], w[0]
-#    return ''.join(w)
+  if len(s) <= 1:
+    return s
+  else:
+    w = []
+    for l in s:
+      w.append(l)
+    w[0], w[-1] = w[-1], w[0]
+    return ''.join(w)
+
+
+def troca2(s):
   return s if len(s) <= 1 else s[-1] + s[1:-1] + s[0]
+
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
@@ -307,6 +311,17 @@ def main():
   test(troca('Chocolate'), 'ehocolatC')
   test(troca('nythoP'), 'Python')
   test(troca('hello'), 'oellh')
+  
+  print ()
+  print ('Troca letras 2')
+  test(troca2('code'), 'eodc')	    
+  test(troca2('a'), 'a')
+  test(troca2('ab'), 'ba')
+  test(troca2('abc'), 'cba')
+  test(troca2(''), '')
+  test(troca2('Chocolate'), 'ehocolatC')
+  test(troca2('nythoP'), 'Python')
+  test(troca2('hello'), 'oellh')
   
 if __name__ == '__main__':
   main()
