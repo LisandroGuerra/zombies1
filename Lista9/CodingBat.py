@@ -60,12 +60,15 @@ def maior_ponta2(nums):
 # retorna a soma dos dois primeiros elementos
 # se a lista tiver menos de dois elementos, soma o que for possível
 def sum2(nums):
-#  if nums:
-#    if len(nums) < 2:
-#      return nums[0]
-#    else:
-#      return nums[0] + nums[1]
-#  return 0
+  if nums:
+    if len(nums) < 2:
+      return nums[0]
+    else:
+      return nums[0] + nums[1]
+  return 0
+ 
+
+def sum2v2(nums):
   return sum(nums[:2])
 
 # F. middle_way
@@ -260,6 +263,17 @@ def main():
   test(sum2([]), 0)
   test(sum2([4, 5, 6]), 9)
   test(sum2([4]), 4)
+  
+  print ()
+  print ('sum2 v2')
+  test(sum2v2([1, 2, 3]), 3)
+  test(sum2v2([1, 1]), 2)
+  test(sum2v2([1, 1, 1, 1]), 2)
+  test(sum2v2([1, 2]), 3)
+  test(sum2v2([1]), 1)
+  test(sum2v2([]), 0)
+  test(sum2v2([4, 5, 6]), 9)
+  test(sum2v2([4]), 4)
 
   print ()
   print ('middle_way')
