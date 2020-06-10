@@ -111,16 +111,14 @@ def date_fashion(eu, par):
 # squirrel_play(95, False) -> False
 # squirrel_play(95, True) -> True
 def squirrel_play(temp, is_summer):
-#  if is_summer:
-#    if 60 <= temp <= 100:
-#      return True
-#    else:
-#      return False
-#  else:
-#    if  :
-#      return True
-#    else:
-#      return False
+  if is_summer:
+    resposta = False
+    if 60 <= temp <= 100:
+      resposta = True
+  return resposta
+
+
+def squirrel_play2(temp, is_summer):
   return 60 <= temp <= 100 if is_summer else 60 <= temp <= 90
 
 # I. pego_correndo
@@ -314,6 +312,22 @@ def main():
   test(squirrel_play(59, False), False)	
   test(squirrel_play(59, True), False)	
   test(squirrel_play(60, False), True)
+  
+  print ()
+  print ('squirrel_play 2')
+  test(squirrel_play2(70, False), True)
+  test(squirrel_play2(95, False), False)
+  test(squirrel_play2(95, True), True)
+  test(squirrel_play2(90, False), True)
+  test(squirrel_play2(90, True), True)
+  test(squirrel_play2(50, False), False)
+  test(squirrel_play2(50, True), False)
+  test(squirrel_play2(100, False), False)
+  test(squirrel_play2(100, True), True)
+  test(squirrel_play2(105, True), False)
+  test(squirrel_play2(59, False), False)	
+  test(squirrel_play2(59, True), False)	
+  test(squirrel_play2(60, False), True)
 
   print ()
   print ('Pego correndo')
