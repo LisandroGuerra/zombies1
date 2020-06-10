@@ -8,9 +8,12 @@
 # near_ten(17) -> False
 # near_ten(19) -> True
 def near_ten(n):
-#  if n % 10 <= 2 or n % 10 >= 8:
-#    return True
-#  return False
+  if n % 10 <= 2 or n % 10 >= 8:
+    return True
+  return False
+  
+  
+def near_ten2(n):
   return n % 10 <= 2 or n % 10 >= 8
 
 # B. lone_sum
@@ -194,7 +197,25 @@ def main():
   test(near_ten(158), True)
   test(near_ten(3), False)
   test(near_ten(1), True)
-
+  
+  print ()
+  print ('Near_ten 2')
+  test(near_ten2(12), True)
+  test(near_ten2(17), False)
+  test(near_ten2(19), True)
+  test(near_ten2(31), True)
+  test(near_ten2(6), False)
+  test(near_ten2(10), True)
+  test(near_ten2(11), True)
+  test(near_ten2(21), True)
+  test(near_ten2(22), True)
+  test(near_ten2(23), False)
+  test(near_ten2(54), False)
+  test(near_ten2(155), False)
+  test(near_ten2(158), True)
+  test(near_ten2(3), False)
+  test(near_ten2(1), True)
+  
   print ()
   print ('Lone Sum')
   test(lone_sum(1, 2, 3), 6)
