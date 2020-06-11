@@ -54,10 +54,13 @@ def lucky_sum(a, b, c):
 # double_char('AAbb') -> 'AAAAbbbb'
 # double_char('Hi-There') -> 'HHii--TThheerree'
 def double_char(s):
-#  r =[]
-#  for l in s:
-#    r.append(l * 2)
-#  return ''.join(r)
+  r =[]
+  for l in s:
+    r.append(l * 2)
+  return ''.join(r)
+
+
+def double_char2(s):
   return ''.join([c + c for c in s])
 
 # E. count_hi
@@ -254,6 +257,18 @@ def main():
   test(double_char('a'), 'aa')
   test(double_char('.'), '..')
   test(double_char('aa'), 'aaaa')
+  
+    print ()
+  print ('Double_char 2')
+  test(double_char2('The'), 'TThhee')
+  test(double_char2('AAbb'), 'AAAAbbbb')
+  test(double_char2('Hi-There'), 'HHii--TThheerree')
+  test(double_char2('Word!'), 'WWoorrdd!!')
+  test(double_char2('!!'), '!!!!')
+  test(double_char2(''), '')
+  test(double_char2('a'), 'aa')
+  test(double_char2('.'), '..')
+  test(double_char2('aa'), 'aaaa')
 
   print ()
   print ('Count_hi')
