@@ -77,9 +77,12 @@ def count_hi(s):
 # cat_dog('catcat') -> False
 # cat_dog('1cat1cadodog') -> True
 def cat_dog(s):
-#  if s.count('cat') == s.count('dog'):
-#    return True
-#  return False
+  if s.count('cat') == s.count('dog'):
+    return True
+  return False
+
+
+def cat_dog2(s):
   return s.count('cat') == s.count('dog')
 
 # G. count_code
@@ -297,6 +300,22 @@ def main():
   test(cat_dog('ca'), True)
   test(cat_dog('c'), True)
   test(cat_dog(''), True)
+  
+  print ()
+  print ('Cat_dog 2')
+  test(cat_dog2('catdog'), True)
+  test(cat_dog2('catcat'), False)
+  test(cat_dog2('1cat1cadodog'), True)
+  test(cat_dog2('catxxdogxxxdog'), False)
+  test(cat_dog2('catxdogxdogxcat'), True)
+  test(cat_dog2('catxdogxdogxca'), False)
+  test(cat_dog2('dogdogcat'), False)
+  test(cat_dog2('dogogcat'), True)
+  test(cat_dog2('dog'), False)
+  test(cat_dog2('cat'), False)
+  test(cat_dog2('ca'), True)
+  test(cat_dog2('c'), True)
+  test(cat_dog2(''), True)
 
   print ()
   print ('Count_code')
