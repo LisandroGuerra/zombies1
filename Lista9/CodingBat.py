@@ -136,19 +136,21 @@ def squirrel_play2(temp, is_summer):
 # pego_correndo(65, False) -> 1
 # pego_correndo(65, True) -> 0 
 def pego_correndo(speed, is_birthday):
-#  velmin = 60
-#  velmax = 81
-#  niver = 5
-#  if is_birthday:
-#    velmin += niver
-#    velmax += niver
-#  if speed <= velmin:
-#    return 0
-#  elif speed >= velmax:
-#    return 2
-#  else:
-#    return 1
+  velmin = 60
+  velmax = 81
+  niver = 5
+  if is_birthday:
+    velmin += niver
+    velmax += niver
+  if speed <= velmin:
+    return 0
+  elif speed >= velmax:
+    return 2
+  else:
+    return 1
 
+  
+def pego_correndo2(speed, is_birthday):
     if is_birthday:
       speed -= 5
     if speed <= 60:
@@ -344,6 +346,21 @@ def main():
   test(pego_correndo(40, False), 0)
   test(pego_correndo(40, True), 0)
   test(pego_correndo(90, False), 2)
+  
+  print ()
+  print ('Pego correndo 2')
+  test(pego_correndo2(60, False), 0)
+  test(pego_correndo2(65, False), 1)
+  test(pego_correndo2(65, True), 0)
+  test(pego_correndo2(80, False), 1)
+  test(pego_correndo2(85, False), 2)
+  test(pego_correndo2(85, True), 1)
+  test(pego_correndo2(70, False), 1)
+  test(pego_correndo2(75, False), 1)
+  test(pego_correndo2(75, True), 1)
+  test(pego_correndo2(40, False), 0)
+  test(pego_correndo2(40, True), 0)
+  test(pego_correndo2(90, False), 2)
 
   print ()
   print ('Alarm Clock')
