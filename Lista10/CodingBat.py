@@ -108,9 +108,13 @@ def count_code(s):
 # end_other('abc', 'abXabc') -> True
 def end_other(a, b):
   a, b = a.lower(), b.lower()
-#  if a.endswith(b) or b.endswith(a):
-#    return True
-#  return False
+  if a.endswith(b) or b.endswith(a):
+    return True
+  return False
+
+
+def end_other2(a, b):
+  a, b = a.lower(), b.lower()
   return a.endswith(b) or b.endswith(a)
 
 # I. count_evens
@@ -350,6 +354,23 @@ def main():
   test(end_other('abcXYZ', 'abcDEF'), False)
   test(end_other('ab', 'ab12'), False)
   test(end_other('ab', '12ab'), True)
+  
+  print ()
+  print ('End_other 2')
+  test(end_other2('Hiabc', 'abc'), True)
+  test(end_other2('AbC', 'HiaBc'), True)
+  test(end_other2('abc', 'abXabc'), True)
+  test(end_other2('Hiabc', 'abcd'), False)
+  test(end_other2('Hiabc', 'bc'), True)
+  test(end_other2('Hiabcx', 'bc'), False)
+  test(end_other2('abc', 'abc'), True)
+  test(end_other2('xyz', '12xyz'), True)
+  test(end_other2('yz', '12xz'), False)
+  test(end_other2('Z', '12xz'), True)
+  test(end_other2('12', '12'), True)
+  test(end_other2('abcXYZ', 'abcDEF'), False)
+  test(end_other2('ab', 'ab12'), False)
+  test(end_other2('ab', '12ab'), True)
 
   print ()
   print ('Count_evens')
