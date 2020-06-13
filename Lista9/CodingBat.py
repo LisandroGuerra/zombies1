@@ -172,15 +172,18 @@ def pego_correndo2(speed, is_birthday):
 # alarm_clock(5, False) -> '7:00'
 # alarm_clock(0, False) -> '10:00'
 def alarm_clock(day, vacation):
-#  week = '7:00'
-#  weekend = '10:00'
-#  if vacation:
-#    week = '10:00'
-#    weekend = 'off'
-#  if day == 0 or day == 6:
-#    return weekend
-#  else:
-#    return week
+  week = '7:00'
+  weekend = '10:00'
+  if vacation:
+    week = '10:00'
+    weekend = 'off'
+  if day == 0 or day == 6:
+    return weekend
+  else:
+    return week
+
+    
+def alarm_clock2(day, vacation):
     if vacation:
       return 'off' if day in (0, 6) else '10:00'
     else:
@@ -373,6 +376,18 @@ def main():
   test(alarm_clock(1, True), '10:00')
   test(alarm_clock(3, True), '10:00')
   test(alarm_clock(5, True), '10:00')
+  
+  print ()
+  print ('Alarm Clock 2')
+  test(alarm_clock2(1, False), '7:00')
+  test(alarm_clock2(5, False), '7:00')
+  test(alarm_clock2(0, False), '10:00')
+  test(alarm_clock2(6, False), '10:00')
+  test(alarm_clock2(0, True), 'off')
+  test(alarm_clock2(6, True), 'off')
+  test(alarm_clock2(1, True), '10:00')
+  test(alarm_clock2(3, True), '10:00')
+  test(alarm_clock2(5, True), '10:00')
 
 if __name__ == '__main__':
   main()
