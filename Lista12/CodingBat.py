@@ -58,8 +58,11 @@ def palindrome(s):
 # palavra = 'ana'
 # busca ('ana e mariana gostam de banana', 'ana') == 4
 def busca(frase, palavra):
-  # return frase.count(palavra)
   return len([p for p in range(len(frase)) if frase[p:len(palavra)+p] == palavra])
+
+def busca2(frase, palavra):
+   return frase.count(palavra)
+
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
@@ -108,6 +111,11 @@ def main():
   print ('busca')
   test(busca('ana e mariana gostam de banana', 'ana'), 4)
   test(busca('uma arara ou duas araras', 'ara'), 4)
+  
+  print ()
+  print ('busca 2')
+  test(busca2('ana e mariana gostam de banana', 'ana'), 4)
+  test(busca2('uma arara ou duas araras', 'ara'), 4)
 
 if __name__ == '__main__':
   main()
