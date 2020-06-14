@@ -144,9 +144,12 @@ def sum13(nums):
 # has22([1, 2, 1, 2]) -> False
 # has22([2, 1, 2]) -> False
 def has22(nums):
-#  if '2, 2' in str(nums):
-#    return True
-#  return False
+  if '2, 2' in str(nums):
+    return True
+  return False
+
+
+def has22_2(nums):
   return '2, 2' in str(nums)
 
 # L. soma_na_lista
@@ -416,6 +419,23 @@ def main():
   test(has22([]), False)
   test(has22([3, 3, 2, 2]), True)
   test(has22([5, 2, 5, 2]), False)
+  
+  print ()
+  print ('Has22 => 2')
+  test(has22_2([1, 2, 2]), True)
+  test(has22_2([1, 2, 1, 2]), False)
+  test(has22_2([2, 1, 2]), False)
+  test(has22_2([2, 2, 1, 2]), True)
+  test(has22_2([1, 3, 2]), False)
+  test(has22_2([1, 3, 2, 2]), True)
+  test(has22_2([2, 3, 2, 2]), True)
+  test(has22_2([4, 2, 4, 2, 2, 5]), True)
+  test(has22_2([1, 2]), False)
+  test(has22_2([2, 2]), True)
+  test(has22_2([2]), False)
+  test(has22_2([]), False)
+  test(has22_2([3, 3, 2, 2]), True)
+  test(has22_2([5, 2, 5, 2]), False)
 
   print ()
   print ('Soma na lista')
