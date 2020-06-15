@@ -33,6 +33,22 @@ def lone_sum(a, b, c):
     return c
   return a + b + c
 
+def lone_sum2(a, b, c):
+  if a == b == c:
+    l_sum = 0
+  elif b == c:
+    l_sum = a
+  elif a == c:
+    l_sum = b
+  elif a == b:
+    l_sum = c
+  else:
+    l_sum = a + b + C
+  return l_sum
+
+def lone_sum3(a, b, c):
+  return sum(set(a, b, c)
+
 # C. luck_sum
 # Soma três inteiros a, b, c
 # Se aparecer um 13 ele não conta e todos os da sua direita também
@@ -240,7 +256,31 @@ def main():
   test(lone_sum(2, 9, 3), 14)
   test(lone_sum(4, 2, 3), 9)
   test(lone_sum(1, 3, 1), 3)
+             
+  print ()
+  print ('Lone Sum 2')
+  test(lone_sum2(1, 2, 3), 6)
+  test(lone_sum2(3, 2, 3), 2)
+  test(lone_sum2(3, 3, 3), 0)
+  test(lone_sum2(9, 2, 2), 9)
+  test(lone_sum2(2, 2, 9), 9)
+  test(lone_sum2(2, 9, 2), 9)
+  test(lone_sum2(2, 9, 3), 14)
+  test(lone_sum2(4, 2, 3), 9)
+  test(lone_sum2(1, 3, 1), 3)
 
+  print ()
+  print ('Lone Sum 3')
+  test(lone_sum3(1, 2, 3), 6)
+  test(lone_sum3(3, 2, 3), 2)
+  test(lone_sum3(3, 3, 3), 0)
+  test(lone_sum3(9, 2, 2), 9)
+  test(lone_sum3(2, 2, 9), 9)
+  test(lone_sum3(2, 9, 2), 9)
+  test(lone_sum3(2, 9, 3), 14)
+  test(lone_sum3(4, 2, 3), 9)
+  test(lone_sum3(1, 3, 1), 3)
+                    
   print ()
   print ('Lucky_sum')
   test(lucky_sum(1, 2, 3), 6)
