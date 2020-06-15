@@ -18,6 +18,12 @@ def donuts(n):
     return 'Número de donuts: ' + str(n)
   return 'Número de donuts: muitos'
 
+def donuts2(n):
+  quantidade = 'muitos'
+  if n < 10:
+    quantidade = str(n)
+  return 'Número de donuts: ' + quantidade
+
 # B. pontas
 # Dada uma string s, retorna uma string com as duas primeiras e as duas
 # últimas letras da string original s
@@ -80,6 +86,13 @@ def main():
   test(donuts(9), 'Número de donuts: 9')
   test(donuts(10), 'Número de donuts: muitos')
   test(donuts(99), 'Número de donuts: muitos')
+  
+  print()
+  print ('donuts 2')
+  test(donuts2(4), 'Número de donuts: 4')
+  test(donuts2(9), 'Número de donuts: 9')
+  test(donuts2(10), 'Número de donuts: muitos')
+  test(donuts2(99), 'Número de donuts: muitos')
 
   print ()
   print ('pontas')
