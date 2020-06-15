@@ -43,11 +43,11 @@ def lone_sum2(a, b, c):
   elif a == b:
     l_sum = c
   else:
-    l_sum = a + b + C
+    l_sum = a + b + c
   return l_sum
 
 def lone_sum3(a, b, c):
-  return sum(set(a, b, c)
+  return sum((a, b, c))
 
 # C. luck_sum
 # Soma três inteiros a, b, c
@@ -308,7 +308,7 @@ def main():
   test(double_char('.'), '..')
   test(double_char('aa'), 'aaaa')
   
-    print ()
+  print ()
   print ('Double_char 2')
   test(double_char2('The'), 'TThhee')
   test(double_char2('AAbb'), 'AAAAbbbb')
