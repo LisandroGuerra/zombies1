@@ -34,6 +34,12 @@ def pontas(s):
     return ''
   return s[:2] + s[-2:]
 
+def pontas2(s):
+  ends = ''
+  if len(s) >= 2:
+    ends = s[:2] + s[-2:]
+  return ends
+
 # C. fixa_primeiro
 # Dada uma string s, retorna uma string onde todas as ocorrências
 # do primeiro caracter são trocados por '*', exceto para o primeiro
@@ -100,6 +106,13 @@ def main():
   test(pontas('algoritmos'), 'alos')
   test(pontas('a'), '')
   test(pontas('xyz'), 'xyyz')
+  
+  print ()
+  print ('pontas 2')
+  test(pontas2('palmeiras'), 'paas')
+  test(pontas2('algoritmos'), 'alos')
+  test(pontas2('a'), '')
+  test(pontas2('xyz'), 'xyyz')
 
   print ()
   print ('fixa_primeiro')
