@@ -64,6 +64,15 @@ def lucky_sum(a, b, c):
     return a + b
   return a + b + c
 
+def lucky_sum2(a, b, c):
+  if a == 13:
+    a, b, c = 0
+  elif b == 13:
+    b, c = 0
+  elif c == 13:
+    c = 0
+  return a + b + c
+
 # D. double_char
 # retorna os caracteres da string original duplicados
 # double_char('The') -> 'TThhee'
@@ -295,6 +304,22 @@ def main():
   test(lucky_sum(8, 13, 2), 8)
   test(lucky_sum(7, 2, 1), 10)
   test(lucky_sum(3, 3, 13), 6)
+  
+  print ()
+  print ('Lucky_sum 2')
+  test(lucky_sum2(1, 2, 3), 6)
+  test(lucky_sum2(1, 2, 13), 3)
+  test(lucky_sum2(1, 13, 3), 1)
+  test(lucky_sum2(1, 13, 13), 1)
+  test(lucky_sum2(6, 5, 2), 13)
+  test(lucky_sum2(13, 2, 3), 0)
+  test(lucky_sum2(13, 2, 13), 0)
+  test(lucky_sum2(13, 13, 2), 0)
+  test(lucky_sum2(9, 4, 13), 13)
+  test(lucky_sum2(8, 13, 2), 8)
+  test(lucky_sum2(7, 2, 1), 10)
+  test(lucky_sum2(3, 3, 13), 6)
+
 
   print ()
   print ('Double_char')
