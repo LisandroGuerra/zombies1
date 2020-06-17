@@ -80,8 +80,8 @@ def lucky_sum2(a, b, c):
 # double_char('Hi-There') -> 'HHii--TThheerree'
 def double_char(s):
   r =[]
-  for l in s:
-    r.append(l * 2)
+  for c in s:
+    r.append(c * 2)
   return ''.join(r)
 
 
@@ -118,11 +118,11 @@ def cat_dog2(s):
 # count_code('codexxcode') -> 2
 # count_code('cozexxcope') -> 2
 def count_code(s):
-  c = 0
-  for l in range(len(s)-3):
-    if s[l:l+2] == 'co' and s[l+3] == 'e':
-      c += 1
-  return c
+  count = 0
+  for c in range(len(s)-3):
+    if s[c:c+2] == 'co' and s[c+3] == 'e':
+      count += 1
+  return count
 
 # H. end_other
 # as duas strings devem ser convertidas para minúsculo via lower()
