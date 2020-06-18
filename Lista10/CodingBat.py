@@ -11,8 +11,7 @@ def near_ten(n):
   if n % 10 <= 2 or n % 10 >= 8:
     return True
   return False
-  
-  
+    
 def near_ten2(n):
   return n % 10 <= 2 or n % 10 >= 8
 
@@ -106,7 +105,6 @@ def cat_dog(s):
     return True
   return False
 
-
 def cat_dog2(s):
   return s.count('cat') == s.count('dog')
 
@@ -136,7 +134,6 @@ def end_other(a, b):
   if a.endswith(b) or b.endswith(a):
     return True
   return False
-
 
 def end_other2(a, b):
   a, b = a.lower(), b.lower()
@@ -173,7 +170,6 @@ def has22(nums):
     return True
   return False
 
-
 def has22_2(nums):
   return '2, 2' in str(nums)
 
@@ -186,12 +182,14 @@ def has22_2(nums):
 # soma_na_lista(4, [2, 2, 2, 2]) -> False
 # soma_na_lista(4, [2, 2, 1, 3]) -> True
 def soma_na_lista(n, lista):
-#  for a in lista:
-#    for b in lista:
-#      if a != b:
-#        if n == a + b:
-#          return True
-#  return False
+ for a in lista:
+   for b in lista:
+     if a != b:
+       if n == a + b:
+         return True
+ return False
+
+def soma_na_lista2(n, lista):
   return n in [x + y for x in lista for y in lista if x != y]
 
 # M.Difícil: Fila de tijolos sem usar loops
@@ -511,6 +509,16 @@ def main():
   test(soma_na_lista(4, [2, 2, 2, 2]), False)
   test(soma_na_lista(4, [2, 2, 1, 3]), True)
   test(soma_na_lista(42, [40, 2, 3, 39]), True)
+  
+  print ()
+  print ('Soma na lista 2')
+  test(soma_na_lista2(5, [1, 2, 3, 4]), True)
+  test(soma_na_lista2(9, [1, 2, 3, 4]), False)
+  test(soma_na_lista2(0, [1, 2, 3, 4]), False)
+  test(soma_na_lista2(8, [1, 2, 3, 4]), False)
+  test(soma_na_lista2(4, [2, 2, 2, 2]), False)
+  test(soma_na_lista2(4, [2, 2, 1, 3]), True)
+  test(soma_na_lista2(42, [40, 2, 3, 39]), True)
 
   print ()
   print ('Fila de Tijolos')
