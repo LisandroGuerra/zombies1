@@ -1,5 +1,10 @@
 Seletiva Facebook Hackaton 2013
-Dados dois inteiros positivos n e k, gerar todos os bin·rios entre os inteiros 0 e 2**n-1, inclusive. Estes bin·rios ser„o sorteados em ordem descrescente segundo o n˙meros de 1s existentes. Caso haja empate escolhemos o menor valor n˙merico. Retorne o k-Èsimo elemento da lista sorteada. Dicas: use count, bin e uma funÁ„o para sortear por outra chave.
+Dados dois inteiros positivos n e k, gerar todos os bin√°rios entre os inteiros 0 e 2**n-1, inclusive.
+Estes bin√°rios ser√£o sorteados em ordem decrescente segundo o n√∫meros de 1s existentes. 
+Caso haja empate escolhemos o menor valor n√∫merico. 
+Retorne o k-√©simo elemento da lista sorteada. 
+
+Dicas: use count, bin e uma fun√ß√£o para sortear por outra chave.
  
 Ex.: n = 3 e k = 5
 ['0b111', '0b11', '0b101', '0b110', '0b1', '0b10', '0b100', '0b0']
