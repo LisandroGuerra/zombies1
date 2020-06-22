@@ -117,8 +117,8 @@ def cat_dog2(s):
 # count_code('cozexxcope') -> 2
 def count_code(s):
   count = 0
-  for c in range(len(s)-3):
-    if s[c:c+2] == 'co' and s[c+3] == 'e':
+  for c in range(len(s) - 3):
+    if s[c:c + 2] == 'co' and s[c + 3] == 'e':
       count += 1
   return count
 
@@ -145,7 +145,7 @@ def end_other2(a, b):
 # count_evens([2, 2, 0]) -> 3
 # count_evens([1, 3, 5]) -> 0
 def count_evens(nums):  
-  return len([n for n in nums if n %2 == 0])
+  return len([n for n in nums if n % 2 == 0])
 
 # J. sum13
 # retorna a soma dos números de uma lista
