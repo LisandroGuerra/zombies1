@@ -201,9 +201,11 @@ def soma_na_lista2(n, lista):
 # fila_tijolos(3, 1, 9) -> False
 # fila_tijolos(3, 2, 10) -> True
 def fila_tijolos(n_peq, n_gra, meta):
-#  if n_peq + 5 * n_gra >= meta and n_peq >= meta % 5:
-#    return True
-#  return False
+  if n_peq + 5 * n_gra >= meta and n_peq >= meta % 5:
+    return True
+  return False
+
+def fila_tijolos2(n_peq, n_gra, meta):
   return n_peq + 5 * n_gra >= meta and n_peq >= meta % 5
 
 # Provided simple test() function used in main() to print
@@ -542,6 +544,29 @@ def main():
   test(fila_tijolos(1000000, 1000, 1000100), True)
   test(fila_tijolos(2, 1000000, 100003), False)
   test(fila_tijolos(12, 2, 21), True)
+  
+  print ()
+  print ('Fila de Tijolos 2')
+  test(fila_tijolos2(3, 1, 8), True)
+  test(fila_tijolos2(3, 1, 9), False)
+  test(fila_tijolos2(3, 2, 10), True)
+  test(fila_tijolos2(3, 2, 8), True)
+  test(fila_tijolos2(3, 2, 9), False)
+  test(fila_tijolos2(6, 1, 11), True)
+  test(fila_tijolos2(6, 0, 11), False)
+  test(fila_tijolos2(3, 1, 7), True)
+  test(fila_tijolos2(1, 1, 7), False)
+  test(fila_tijolos2(2, 1, 7), True)
+  test(fila_tijolos2(7, 1, 11), True)
+  test(fila_tijolos2(7, 1, 8), True)
+  test(fila_tijolos2(7, 1, 13), False)
+  test(fila_tijolos2(43, 1, 46), True)
+  test(fila_tijolos2(40, 1, 46), False)
+  test(fila_tijolos2(22, 2, 33), False)
+  test(fila_tijolos2(0, 2, 10), True)
+  test(fila_tijolos2(1000000, 1000, 1000100), True)
+  test(fila_tijolos2(2, 1000000, 100003), False)
+  test(fila_tijolos2(12, 2, 21), True)
 
 if __name__ == '__main__':
   main()
